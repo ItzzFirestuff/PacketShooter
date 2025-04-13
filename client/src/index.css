@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+/* Hyperspeed Grid Animation */
+@keyframes hyperspeed-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+.hyperspeed-grid {
+  animation: hyperspeed-flow 1s linear infinite;
+  position: relative;
+}
+
+/* Speed lines effect for hyperspeed mode */
+.hyperspeed-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.05) 10%, 
+    rgba(255, 255, 255, 0) 20%);
+  background-size: 200% 100%;
+  animation: speed-lines 0.6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes speed-lines {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Credits page animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(100vh) rotateX(20deg); }
+  100% { transform: translateY(-500%) rotateX(20deg); }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.credits-scroll {
+  animation: scrollUp 60s linear forwards;
+}

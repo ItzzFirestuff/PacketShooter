@@ -1,0 +1,231 @@
+.leaderboard {
+  font-family: 'Courier New', monospace;
+  color: white;
+  width: 100%;
+}
+
+.leaderboard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #6ee7b7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table th {
+  background-color: rgba(17, 24, 39, 0.7);
+  color: #6ee7b7;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table th:hover {
+  color: #38bdf8;
+}
+
+.table tr:nth-child(even) {
+  background-color: rgba(31, 41, 55, 0.4);
+}
+
+.table tr:nth-child(odd) {
+  background-color: rgba(17, 24, 39, 0.4);
+}
+
+.entry {
+  transition: background-color 0.2s;
+}
+
+.entry:hover {
+  background-color: rgba(79, 70, 229, 0.2) !important;
+}
+
+.rank {
+  font-weight: bold;
+  color: #38bdf8;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.name {
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.name:hover {
+  white-space: normal;
+  overflow: visible;
+  word-break: break-all;
+}
+
+.level {
+  color: #fbbf24;
+  width: 3rem;
+  text-align: center;
+}
+
+.score {
+  color: #34d399;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.threats {
+  color: #f87171;
+  text-align: center;
+}
+
+.accuracy {
+  color: #a78bfa;
+  text-align: center;
+}
+
+.loading {
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(17, 24, 39, 0.4);
+  border-radius: 0.375rem;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(17, 24, 39, 0.4);
+  border-radius: 0.375rem;
+}
+
+.emptyState {
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(17, 24, 39, 0.4);
+  border-radius: 0.375rem;
+}
+
+.sortControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.sortControls select {
+  background-color: rgba(31, 41, 55, 0.7);
+  color: white;
+  border: 1px solid rgba(75, 85, 99, 0.7);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.sortDirection {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.sortDirection:hover {
+  color: white;
+}
+
+/* Fullscreen modal styling */
+.fullscreenModal {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContent {
+  animation: slideIn 0.3s ease-out;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContent .table {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0;
+}
+
+/* Ensure fullscreen modal table cells show full text */
+.fullscreenModal .table th,
+.fullscreenModal .table td {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  min-width: 50px;
+  text-align: center;
+  padding: 0.6rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Keep the fixed width for certain columns */
+.fullscreenModal .rank {
+  width: 3rem;
+}
+
+.fullscreenModal .level {
+  width: 4rem;
+}
+
+/* Specific column styling for fullscreen mode */
+.fullscreenModal .score {
+  text-align: right;
+  padding-right: 1.5rem;
+  min-width: 100px;
+}
+
+.fullscreenModal .accuracy {
+  min-width: 70px;
+}
+
+.fullscreenModal .threats {
+  min-width: 70px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+} 
