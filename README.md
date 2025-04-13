@@ -6,7 +6,7 @@ Hey there, cyber defenders! 👋 Ready to stop some sus network traffic and beco
 
 No cap, this project slaps. It's giving cyberpunk aesthetics meets arcade-shooter energy meets network security simulation. 🔥
 
-![Game Preview](./preview.png)
+![Game Preview](docs/screenshots/gameplay2.png)
 
 ## 🎮 Gameplay - How It Works
 
