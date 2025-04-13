@@ -94,7 +94,7 @@ Step into the neon-lit world of Packet Sniper with these game highlights!
 
 ### 🏠 Home Screen
 
-![Home Screen](docs/screenshots/home.png)
+![Home Screen](docs/screenshots/menu.png)
 
 The cyber-styled landing page features:
 - User authentication with agent tag system
@@ -104,7 +104,7 @@ The cyber-styled landing page features:
 
 ### ⚔️ Gameplay Experience
 
-![Gameplay](docs/screenshots/gameplay.png)
+![Gameplay](docs/screenshots/gameplay1.png)
 
 The main arena where you'll defend the network:
 - Fast-paced packet shooting mechanics
@@ -125,7 +125,7 @@ Track your progress with detailed stats:
 
 ### 🎓 Tutorial System
 
-![Tutorial](docs/screenshots/tutorial.png)
+![Tutorial](docs/screenshots/how2play.png)
 
 Learn the ropes with an intuitive tutorial:
 - Step-by-step guidance
